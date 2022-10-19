@@ -20,8 +20,8 @@ private:
   int car_count;
 
 public:
-  Customer(string name = "", string phone_number = "", string id = "",
-           string psswd = "", int admin = 0, string address = "");
+  Customer(string name, string phone_number, string id,
+           string psswd, int admin, string address);
   ~Customer();
   string getPhone();
   string getName();
