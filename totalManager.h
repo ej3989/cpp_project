@@ -17,6 +17,8 @@ public:
 	void addCarList();
 	void saveCar();
 	void saveHuman();
+	void printCarList();
+	void printHuman();
 };
 
 #endif
