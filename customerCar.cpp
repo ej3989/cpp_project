@@ -4,7 +4,7 @@
 #include <iostream>
 #include <queue>
 
-using namespace std;
+using namespace std;//수정용
 void BFS(int x, int y,int(*visit)[100], int(*check)[100], int (*map)[100],vector<pair<int,int>> asPosition);
 void customerCar::findAs(int x, int y){
 
