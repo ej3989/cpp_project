@@ -61,6 +61,6 @@ public:
     string getType(){return type;}
     int getPrice(){return price;}
     int getCarId(){return carId;}
-    vector<pair<int,int>>& getAspostion(){return asLocation;}
+    vector<pair<int,int>> getAspostion(){return asLocation;}
 };
 #endif
