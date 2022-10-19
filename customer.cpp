@@ -35,7 +35,6 @@ bool Customer::correct_psswd(string id, string psswd) {
     return false;
 }
 
-void Customer::addCart(int car) {}
 
 void Customer::addBuyingList(int carId) {
   this->buying_list.push_back(carId);
