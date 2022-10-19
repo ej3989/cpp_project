@@ -52,7 +52,7 @@ public:
             asLocation.push_back(make_pair(78,24));
             asLocation.push_back(make_pair(81,48));
             asLocation.push_back(make_pair(26,42));
-        }
+        }//
     }
     string getBrand(){return brand;}
     string getEngine(){return engine;}
@@ -61,6 +61,6 @@ public:
     string getType(){return type;}
     int getPrice(){return price;}
     int getCarId(){return carId;}
-    vector<pair<int,int>>& getAspostion(){return asLocation;}
+    vector<pair<int,int>> getAspostion(){return asLocation;}
 };
 #endif
