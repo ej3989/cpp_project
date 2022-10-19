@@ -10,13 +10,25 @@ void customerCar::findAs(int x, int y){
     int visit[100][100]={0,};
     int check[100][100]={0,};
     int map[100][100]={0,};
-    for(int i=0;i<40;i++){
-        map[(int)(rand()%100)][(int)(rand()%100)]=1;
-    }
-
     vector<pair<int,int>> asPosition;
     for( auto V:checkAs){
         asPosition.push_back(make_pair(V.first,V.second));
+    }
+    srand(time(NULL));
+    for(int i=0;i<3000;i++){
+        int newX=rand()%100;
+        int newY=rand()%100;
+        int flag =1;
+        for(auto X : asPosition){
+            if(X.first==newX&&X.second==newY){
+                flag =0; break;
+            }
+        }
+        if(flag==1) map[newX][newY] = 1;
+    }
+    for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++) cout<<map[i][j];
+        cout<<endl;
     }
     BFS(x,y,visit,check,map,asPosition);
 }
@@ -44,16 +56,15 @@ void BFS(int x, int y,int(*visit)[100], int(*check)[100], int (*map)[100],vector
             }
         }
     }
-    int MinLong = check[asPosition[0].first][asPosition[0].second];
+    int MinLong = 100000;
     int MinX = asPosition[0].first;
     int MinY = asPosition[0].second;
     for(auto G : asPosition){
-        if(MinLong>check[G.first][G.second]) {
+        if(MinLong>check[G.first][G.second]&&check[G.first][G.second]!=0) {
             MinLong = check[G.first][G.second];
             MinX = G.first;
             MinY = G.second;
             }
     }
-
     cout<<"("<<MinX<<","<<MinY<<") 로 가시면 총 "<<MinLong<<"km 걸립니다."<<endl;
 }
