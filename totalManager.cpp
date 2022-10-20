@@ -1,5 +1,7 @@
 #include "totalManager.h"
 #include <fstream>
+#include <iostream>
+#include <algorithm>
 
 void totalManager::loadCar(){
 
@@ -20,13 +22,37 @@ void totalManager::loadCar(){
 }
 void totalManager::loadHuman(){
 
+	Customer *add_custmer;
+	add_custmer = new Customer ("kim","010-1111-1111","wer1","12345678",0,"seoul");
+	customerData.push_back(*add_custmer);
+	add_custmer = new Customer ("Charles","010-3333-1111","der1","12345678",0,"seoul");
+	customerData.push_back(*add_custmer);
+	add_custmer = new Customer ("Ken","010-4444-1111","wber1","12345678",0,"seoul");
+	customerData.push_back(*add_custmer);
+	add_custmer = new Customer ("Grec","010-5555-1111","11r31","12345678",0,"pusan");
+	customerData.push_back(*add_custmer);
+	add_custmer = new Customer ("admin","000-0000-0000","admin","12345678",1,"");
+	customerData.push_back(*add_custmer);
+
+
+}
+Customer& totalManager::findUser(string name){
+	
+	auto it = find_if(customerData.begin(),customerData.end(),[name](Customer a)->bool{return (a.getName() == name);});
+	if(it==customerData.end()){
+		cout << "사용자가 없습니다" << endl;
+	}
+		
+	return *it;
+
 }
 void totalManager::saveCar(){
-
+	//필요가 없음 ...
 
 }
 void totalManager::saveHuman(){
 
+	// 필요가 없음...
 }
 void totalManager::printCarList(){
 	for( auto out_data : carlist){
@@ -56,7 +82,25 @@ void totalManager::join(){
 	cout << "address : ";
 	getline(cin, address,'\n');
 	
-	cout << " 생성 계정 타입 " : 
+	cout << " 생성 계정 타입 user: 0 , admin : 1 " << endl;
+	int usertype;
+	cin >> usertype ;
+	if( usertype == 1){
+		while(true){
+			string admin_passwd;
+			cout << "비빌 번호 입력 하세요(exit) " ;
+			getline(cin, admin_passwd,'\n');
+
+			if(admin_passwd == "mobis1234"){
+				admin = 1;
+				break;
+			}else if(admin_passwd == "exit")
+				break;
+
+		}
+		
+	}
+
 
 	Customer addcustomer(name, phone_number,id,passwd,admin,address);
 

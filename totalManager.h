@@ -20,6 +20,7 @@ public:
 	void saveHuman();
 	void printCarList();
 	void printHuman();
+	Customer& findUser(string name);
 };
 
 #endif
