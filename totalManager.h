@@ -20,6 +20,9 @@ public:
 	void saveHuman();
 	void printCarList();
 	void printHuman();
+	vector<stockManageCar> getcarlist(){return carlist;};
+	vector<Customer> getCustomerlist(){return customerData;};
+	Customer& findUser(string name);
 };
 
 #endif
