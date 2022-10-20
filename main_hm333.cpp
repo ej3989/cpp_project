@@ -32,13 +32,13 @@ int main(){
         cout<<"===========================================================================";
         cin>>choiceMenu;
     string tempID, tempPW;
-    Customer* nowUser;
+    Customer nowUser;
     switch(choiceMenu){
         case '1' :
             cout<<"ID : ";
             cin>>tempID;
             //king 클래스 리스트 소환.
-            nowUser= King.findUser(tempID);
+            nowUser = King.findUser(tempID);
             cout<<"PW : ";
             cin>>tempPW;
             if(nowUser.correct_psswd(tempID,tempPW)){
