@@ -10,6 +10,7 @@ using namespace std;
 class totalManager {
 	vector<stockManageCar> carlist;
 	vector<Customer> customerData;
+	//소환 함수 부탁드립니다. 
 public:
 	void loadCar();
 	void loadHuman();

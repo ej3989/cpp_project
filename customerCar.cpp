@@ -13,7 +13,7 @@ void customerCar::findAs(int x, int y){
     int check[100][100]={0,}; //check 초기화(거리 계산용)
     int map[100][100]={0,}; // 0으로 기본 맵 초기화
     srand(time(NULL));
-    for(int i=0;i<1000;i++){ //임의 랜덤으로 지도 상황 변경(1일시 교통불가)
+    for(int i=0;i<4000;i++){ //임의 랜덤으로 지도 상황 변경(1일시 교통불가)
         int newX=rand()%100;
         int newY=rand()%100;
         int flag =1;
@@ -63,5 +63,15 @@ void BFS(int x, int y,int(*visit)[100], int(*check)[100], int (*map)[100],vector
     }
     if(MinLong ==100000) cout<<"기상악화로 아무곳도 갈수 없습니다"<<endl;
     //전부 도착 못할 시 기준 가정
-    else cout<<"("<<MinX<<","<<MinY<<") 로 가시면 총 "<<MinLong<<"km 걸립니다. "<<endl;
+    else {cout<<"("<<MinX<<","<<MinY<<") 로 가시면 총 "<<MinLong<<"km 걸립니다. "<<endl;
+    int a;
+    cout<<"1을 누르시면 주행모드로 전환됩니다. :";
+    cin>>a;
+    switch(a){
+        case 1:
+            break;
+        default:
+        cout<<"좋은하루되세요"<<endl;
+    }
+    }
 }

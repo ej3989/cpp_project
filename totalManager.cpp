@@ -67,19 +67,19 @@ void totalManager::addCarList(){
 	string brand , engine, carName, color,type;
 	int price,quantity;
 
-	cout << "Brand(kia/hyundai/sm) : " ;
+	cout << "Brand(KIA/HYUNDAI/BENTZ) : " ;
 	getline(cin, brand,'\n');
 
-	cout << "engine : " ;
+	cout << "ENGINE(Normal/HEV/EV) : " ;
 	getline(cin,engine ,'\n');
 
 	cout << "Carname : " ;
 	getline(cin, carName,'\n');
 
-	cout << "color : " ;
+	cout << "color(Black/White/Red/Silver) : " ;
 	getline(cin, color,'\n');
 
-	cout << "Type: " ;
+	cout << "Type(SUV/Sedan): " ;
 	getline(cin, type,'\n');
 
 	cout << "Price : " ;
