@@ -5,15 +5,15 @@ void totalManager::loadCar(){
 
 
 	stockManageCar *add_car ;
-	add_car = new stockManageCar("HMC", "Hybrid", "avante","red","sedan",1000,30);
+	add_car = new stockManageCar("HMC", "Normal", "grandeur","red","sedan/suv",5000,25);
 	carlist.push_back(*add_car);
-	add_car = new stockManageCar("KIA", "Hybrid", "sonata","red","sedan",1000,30);
+	add_car = new stockManageCar("KIA", "HEVcar", "staria","black","sedan",4000,30);
 	carlist.push_back(*add_car);
-	add_car = new stockManageCar("HMC", "Hybrid", "avante","red","sedan",1000,30);
+	add_car = new stockManageCar("BENTZ", "EVcar", "E-class","white","sedan",9000,12);
 	carlist.push_back(*add_car);
-	add_car = new stockManageCar("KIA", "Hybrid", "avante","red","sedan",1000,30);
+	add_car = new stockManageCar("KIA", "PBV", "sportage","silver","suv",3500,30);
 	carlist.push_back(*add_car);
-	add_car = new stockManageCar("SMS", "Hybrid", "avante","red","sedan",1000,30);
+	add_car = new stockManageCar("HMC", "Noraml", "G90","red","sedan",8200,2);
 	carlist.push_back(*add_car);
 
 
@@ -22,8 +22,6 @@ void totalManager::loadHuman(){
 
 }
 void totalManager::saveCar(){
-
-
 
 
 }
@@ -57,6 +55,8 @@ void totalManager::join(){
 
 	cout << "address : ";
 	getline(cin, address,'\n');
+	
+	cout << " 생성 계정 타입 " : 
 
 	Customer addcustomer(name, phone_number,id,passwd,admin,address);
 
