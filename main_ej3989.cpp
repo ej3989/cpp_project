@@ -14,5 +14,6 @@ int main(){
 
 	admin_manager.printCarList();
 	
+	admin_manager.join();
 }
 
