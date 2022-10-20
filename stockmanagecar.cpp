@@ -16,3 +16,9 @@ int stockManageCar::getSale(){
     int randGauge = rand()%20+1;
     return price*(80+randGauge)/100;
 }
+void stockManageCar::saleIncreasing(int number){
+    saleQuan+=number; //number를 통한 재고 상승
+}
+void stockManageCar::saleDecreasing(int number){
+    saleQuan-=number; //재고 하락
+}
