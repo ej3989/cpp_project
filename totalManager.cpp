@@ -36,9 +36,10 @@ void totalManager::loadHuman(){
 
 
 }
+
 Customer& totalManager::findUser(string name){
 	
-	auto it = find_if(customerData.begin(),customerData.end(),[name](Customer a)->bool{return (a.getName() == name);});
+	auto it = find_if(customerData.begin(),customerData.end(),[name](Customer a)->bool{ return (a.getName() == name);});
 	if(it==customerData.end()){
 		cout << "사용자가 없습니다" << endl;
 	}
