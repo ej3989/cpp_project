@@ -20,6 +20,15 @@ private:
   int car_count;
 
 public:
+  Customer(){
+    this->name = "";
+    this->phone_number = "";
+    this->id = "";
+    this->psswd = "";
+    this->admin = 0;
+    this->address = "";
+    car_count = 0;
+  }
   Customer(string name, string phone_number, string id,
            string psswd, int admin, string address);
   ~Customer();
