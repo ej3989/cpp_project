@@ -28,7 +28,6 @@ public:
     this->admin = 0;
     this->address = "";
     car_count = 0;
-    
   }
   Customer(string name, string phone_number, string id,
            string psswd, int admin, string address);
